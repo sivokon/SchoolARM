@@ -67,7 +67,7 @@ module alu(
         logic neg, zero, carry, overflow; // flags
         
         assign NewSrcB = ALUControl[0] ? ~SrcB : SrcB; 
-        assign Sum = {1'b0, SrcA[31:0]} + {1'b0, SrcB[31:0]} + {31'b0, ALUControl[0:0]};
+        assign Sum = {1'b0, SrcA[31:0]} + {1'b0, NewSrcB[31:0]} + {31'b0, ALUControl[0:0]};
         assign Cout = Sum[32];
         
         always_comb
