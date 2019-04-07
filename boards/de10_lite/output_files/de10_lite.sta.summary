@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'ADC_CLK_10'
+Slack : -1.972
+TNS   : -27.924
+
+Type  : Slow 1200mV 85C Model Setup 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : -1.170
+TNS   : -7.473
+
+Type  : Slow 1200mV 85C Model Hold 'ADC_CLK_10'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : 0.574
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ADC_CLK_10'
+Slack : -3.000
+TNS   : -35.269
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Setup 'ADC_CLK_10'
+Slack : -1.675
+TNS   : -23.083
+
+Type  : Slow 1200mV 0C Model Setup 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : -0.966
+TNS   : -6.049
+
+Type  : Slow 1200mV 0C Model Hold 'ADC_CLK_10'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : 0.537
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ADC_CLK_10'
+Slack : -3.000
+TNS   : -35.269
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Fast 1200mV 0C Model Setup 'ADC_CLK_10'
+Slack : -0.770
+TNS   : -0.990
+
+Type  : Fast 1200mV 0C Model Setup 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ADC_CLK_10'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ADC_CLK_10'
+Slack : -3.000
+TNS   : -26.734
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sm_top:sm_top|sm_clk_divider:sm_clk_divider|sm_register_we:r_cntr|dividerReg[22]'
+Slack : -1.000
+TNS   : -8.000
+
+------------------------------------------------------------
