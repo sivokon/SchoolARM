@@ -49,7 +49,7 @@ module decoder
             default: ALUControl = 2'bx;  // unimplemented 
         endcase
         // update flags if S bit is set (C & V only for arith)
-        if(Funct[4:1] == 4'b1101) begin
+        if(Funct[4:1] == 4'b1101) begin // don't update flags when MOV
 			FlagW[1] = 1'b0;
 			FlagW[0] = 1'b0;
 		  end
