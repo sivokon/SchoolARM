@@ -22,9 +22,10 @@ module instruction_memory
     input logic  [ 31:0 ] adress, 
     output logic [ 31:0 ] read_data
 );
+
     logic [31:0] RAM[63:0];
-    initial $readmemh("memfile.dat",RAM);
-    assign rd = RAM[adress[31:2]]; // word aligned
+    initial $readmemh("memfile.dat", RAM);
+    assign read_data = RAM[adress[31:2]]; // word aligned
 	
     /*logic [7:0] RAM[255:0];
     initial $readmemh("memfile.dat", RAM);

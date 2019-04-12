@@ -1,4 +1,5 @@
-module decoder(
+module decoder
+(
 	input  logic  [1:0] Op, 
     input  logic  [5:0] Funct, 
     input  logic  [3:0] Rd, 
@@ -27,7 +28,7 @@ module decoder(
                else controls = 12'b100111010000;
                                
         2'b10: if (Funct[5]) //BL
-					if (Funct[4]) controls = 12'b011010001010; 
+					if (Funct[4]) controls = 12'b011010101010; 
 					         //B
 					else controls = 12'b011010001000;
 			   else controls = 12'bx;
@@ -48,8 +49,14 @@ module decoder(
             default: ALUControl = 2'bx;  // unimplemented 
         endcase
         // update flags if S bit is set (C & V only for arith)
-        FlagW[1] = Funct[0];
-        FlagW[0] = Funct[0] & (ALUControl == 2'b00 | ALUControl == 2'b01);
+        if(Funct[4:1] == 4'b1101) begin
+			FlagW[1] = 1'b0;
+			FlagW[0] = 1'b0;
+		  end
+		else begin
+			FlagW[1] = Funct[0];
+			FlagW[0] = Funct[0] & (ALUControl == 2'b00 | ALUControl == 2'b01);
+		  end
         end
     else begin 
         ALUControl = 2'b00; // add for non-DP instructions 

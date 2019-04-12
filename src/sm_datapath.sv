@@ -17,9 +17,10 @@ module sm_datapath
     output   logic  [ 31:0 ]   ALUResult,
     output   logic  [ 31:0 ]   dataMemory_writeData, 
     input    logic  [ 31:0 ]   dataMemory_readData,
-	input    logic  [ 31:0 ]   writeData3Src,
+	input    logic             writeData3Src,
 	input    logic             srcASrc
 );
+
     logic [31:0] WD3;
 	logic [3:0 ] A3;
 	logic [31:0] SrcAMux_Src;
@@ -58,12 +59,12 @@ module sm_datapath
         .write_enable3                    ( RegWrite                        ),
         .r15                              ( PCPlus8                         )
     );
-	
-	mux2 #(32) writeData3_mux(Result, PCPlus4, writeData3Src, WD3);
-	mux2 #(32) srcASrc_mux(SrcAMux_Src, 32'b0, srcASrc, SrcA);
     
     mux2 #(32) resmux(ALUResult, dataMemory_readData, MemtoReg, Result);
     extend ext(instructionMemory_data[23:0], ImmSrc, ExtImm);
+	
+	mux2 #(32) writeData3_mux(Result, PCPlus4, writeData3Src, WD3);
+	mux2 #(32) srcASrc_mux(SrcAMux_Src, 32'b0, srcASrc, SrcA);
     
     // ALU logic 
     mux2 #(32) srcbmux(dataMemory_writeData, ExtImm, ALUSrc, SrcB);

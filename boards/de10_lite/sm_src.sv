@@ -1,8 +1,3 @@
-
-
-
-
-
 module condlogic(input logic clk, reset, 
         input  logic [3:0] Cond, 
         input  logic [3:0] ALUFlags, 
