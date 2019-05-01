@@ -90,7 +90,21 @@ artifacts/
 *.rpt
 *.done
 *.summary
-
+*.sci
+*.hier_info
+*.html
+*.tdb
+*.hdb
+*.smsg
+*.jdi
+*.pin
+*.pof
+*.sld
+*.sof
+*.sig
+*.dfp
+*.hb_info
+*.json
 
 # Chutzpah Test files
 _Chutzpah*
