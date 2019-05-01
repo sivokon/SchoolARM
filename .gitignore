@@ -105,6 +105,8 @@ artifacts/
 *.dfp
 *.hb_info
 *.json
+*.hsd
+*.xml
 
 # Chutzpah Test files
 _Chutzpah*
