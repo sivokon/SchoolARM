@@ -1,7 +1,7 @@
 		add		r10, r10, #0     
 		add		sp, sp, #100
     	add		r1, r10, #4      
-		bl		#8       
+		bl		#0      
 		b		#96            
 		
     	add		sp, sp, #-8       

@@ -6,7 +6,8 @@ module sm_top
     input           clkEnable,
     output          clk,
     input   [ 3:0 ] regAddr,
-    output  [31:0 ] regData
+    output  [31:0 ] regData,
+	output  [31:0 ] numberHex
 );
     
     sm_clk_divider sm_clk_divider
@@ -29,14 +30,16 @@ module sm_top
     logic    [31:0]  dataMemory_writeData;
     logic    [31:0]  dataMemory_readData;
     
-    data_memory data_memory
-    (
-        .clk             ( clk                        ),
-        .write_enable    ( dataMemory_writeEnable     ),
-        .adress          ( dataMemory_address         ),
-        .write_data      ( dataMemory_writeData       ),
-        .read_data       ( dataMemory_readData        )
-    );
+	sm_matrix matrix
+	(
+		.clk                       ( clk                       ),    
+		.rst_p                     ( rst_p                     ),
+		.dataMemory_address        ( dataMemory_address        ),
+		.dataMemory_writeEnable    ( dataMemory_writeEnable    ),
+		.dataMemory_writeData      ( dataMemory_writeData      ),
+		.dataMemory_readData       ( dataMemory_readData       ),
+		.numberHex                 ( numberHex                 )
+	);
     
     // instantiate processor and memories 
     sm_arm sm_arm
